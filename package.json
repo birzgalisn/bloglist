@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "name": "@bloglist/monorepo",
+  "scripts": {
+    "dev:client": "npm run dev -w @bloglist/client",
+    "dev:server": "npm run dev -w @bloglist/server",
+    "dev": "concurrently --names \"vite,server\" \"npm run dev:client\" \"npm run dev:server\"",
+    "build": "npm run build -w @bloglist/client",
+    "start:test:server": "npm run start:test -w @bloglist/server",
+    "start:test": "concurrently --names \"vite,server\" \"npm run dev:client\" \"npm run start:test:server\"",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "npm run test -w @bloglist/server"
+  },
+  "workspaces": [
+    "./packages/*"
+  ],
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.16.3",
+    "concurrently": "^6.4.0",
+    "eslint": "^8.4.1",
+    "eslint-plugin-jest": "^25.3.2",
+    "eslint-plugin-react": "^7.28.0",
+    "prettier": "^2.5.1"
+  }
+}
