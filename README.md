@@ -2,7 +2,7 @@
 
 This is a simple create-read-update-delete application.
 
-Project is split into two packages: 
+Project is split into two packages:
 - Client `packages/client`
 - Server `packages/server`
 
@@ -17,7 +17,7 @@ npm install
 
 Second, navigate to `packages/server` and create `.env` file. Example can be view in `packages/server/.env.example`.
 
-Third, run the server from project root: `/`:
+Third, run the server from project root `/`:
 ```bash
 npm run dev
 ```
